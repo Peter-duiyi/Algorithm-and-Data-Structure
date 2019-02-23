@@ -1,6 +1,6 @@
 ## Tree Implementation
-Suppose we want to build a tree for some tree algorithms implementation。
-Normally we build a tree by using two classes, one node class to define tree Node and the other one tree class to build the tree.
+Suppose we want to build a tree for some tree algorithms implementation,
+Normally how we do it is by using two classes, one node class to define tree Node and the other one tree class to build the tree.
 You can also see people use a struct and a class, there is no difference between two methods.  
 
 ```
