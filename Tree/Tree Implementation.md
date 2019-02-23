@@ -17,8 +17,7 @@ struct TreeNode {
 Then we also need a Tree class 
 
 ```
-class Tree
-{
+class Tree{
 public:
 	TreeNode* _root;
 	Tree() {
