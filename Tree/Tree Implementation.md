@@ -30,3 +30,4 @@ public:
 
 ```
 You can also encapulate the tree class and node struct if you want. Maybe I will add it to my code in the future.
+Basically, that will be the structure I use to implement some of my tree algorthms.
