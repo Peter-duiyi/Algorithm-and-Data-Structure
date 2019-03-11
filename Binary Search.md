@@ -51,7 +51,7 @@ void binarySearch(int begin, int end, int target) {
 }
 ```
 That looks much clear for me.
-And we also have a while loop version
+And we also have a while loop version: 
 ```
 int bianrySearch(int begin, int end, int target) {
 		while (begin <= end) {
