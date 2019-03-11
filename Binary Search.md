@@ -69,7 +69,7 @@ int bianrySearch(int begin, int end, int target) {
 		return -1; // cannot find 
 	}
 ```
-I think I like this one better than the previous one. And I feel free to use return type without worrying about where I should set an exit for the program.
+I think I like this one better than the previous one. And I feel free to use return type without worrying about where I should set exits for the program.
 
 ------
 ### Reference
