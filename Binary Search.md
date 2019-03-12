@@ -103,7 +103,7 @@ int binarySearchFindLast(int begin, int end, int target){
 You can find a similar quesion here [leetcode.34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 
 After we are done with the problem above. We can take a look at a similar quesion that I just found but it is much easier.
-[leetcode.278](https://leetcode.com/problems/first-bad-version/) 
+[leetcode.278](https://leetcode.com/problems/first-bad-version/)  
 Here I used the same idea with a few modifications.
 ```
 int firstBadVersion(int n) {
@@ -121,9 +121,7 @@ int firstBadVersion(int n) {
             }
         }
         return temp;
-    }
-
-
+}
 ```
 ------
 ### Reference
