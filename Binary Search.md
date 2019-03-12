@@ -100,7 +100,7 @@ int binarySearchFindLast(int begin, int end, int target){
         return temp;
     }
 ```
-You can find a similar quesion here [leetcode.34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+You can find a similar quesion here. [leetcode.34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 
 After we are done with the problem above. We can take a look at a similar quesion that I just found but it is much easier.
 [leetcode.278](https://leetcode.com/problems/first-bad-version/)  
@@ -127,7 +127,7 @@ int firstBadVersion(int n) {
 One Thing should be noticed is that we are suggested to use start+(end-start)/2 instead of using (start+end)/2 since the last may cause data overflow, if both start and end are closed to INT_MAX(sounds stupid).  
 You can see more details [here](https://leetcode.com/problems/first-bad-version/discuss/71311/A-good-warning-to-me-to-use-start%2B(end-start)2-to-avoid-overflow)
 
-One more similar eacy problem, but with confusing description
+One more similar eacy problem, but with confusing description.  
 [leetcode.374](https://leetcode.com/problems/guess-number-higher-or-lower/)  
 Here is the [confusing part](https://leetcode.com/problems/guess-number-higher-or-lower/discuss/84665/The-key-point-is-to-read-the-problem-carefully.)
 ```
