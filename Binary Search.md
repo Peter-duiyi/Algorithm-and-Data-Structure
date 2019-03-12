@@ -127,6 +127,34 @@ int firstBadVersion(int n) {
 One Thing should be noticed is that we are suggested to use start+(end-start)/2 instead of using (start+end)/2 since the last may cause data overflow, if both start and end are closed to INT_MAX(sounds stupid).  
 You can see more details [here](https://leetcode.com/problems/first-bad-version/discuss/71311/A-good-warning-to-me-to-use-start%2B(end-start)2-to-avoid-overflow)
 
+One more similar eacy problem, but with confusing description
+[leetcode.374](https://leetcode.com/problems/guess-number-higher-or-lower/)
+[confusing part](https://leetcode.com/problems/guess-number-higher-or-lower/discuss/84665/The-key-point-is-to-read-the-problem-carefully.)
+```
+class Solution {
+public:
+    int guessNumber(int n) {
+        int left = 1;
+        int right = n;
+        while(left <= right){
+            int mid = left + (right-left)/2;
+            if(guess(mid) == 1){ //the answer is on the right 
+                left = mid + 1;
+                cout << "left: " << left << endl;
+            }
+            if(guess(mid) == -1){ // the answer is on the left
+                right = mid - 1;
+                cout << "right: " << right << endl;
+            }
+            if(guess(mid) == 0){ // get the answer
+                return mid;
+            }
+        }
+        return -1;
+    }
+};
+```
+
 
 ### Reference
 wiki: https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95
