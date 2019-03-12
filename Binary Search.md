@@ -128,7 +128,7 @@ One Thing should be noticed is that we are suggested to use start+(end-start)/2 
 You can see more details [here](https://leetcode.com/problems/first-bad-version/discuss/71311/A-good-warning-to-me-to-use-start%2B(end-start)2-to-avoid-overflow)
 
 One more similar eacy problem, but with confusing description
-[leetcode.374](https://leetcode.com/problems/guess-number-higher-or-lower/)
+[leetcode.374](https://leetcode.com/problems/guess-number-higher-or-lower/)  
 [confusing part](https://leetcode.com/problems/guess-number-higher-or-lower/discuss/84665/The-key-point-is-to-read-the-problem-carefully.)
 ```
 class Solution {
