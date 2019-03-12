@@ -129,7 +129,7 @@ You can see more details [here](https://leetcode.com/problems/first-bad-version/
 
 One more similar eacy problem, but with confusing description
 [leetcode.374](https://leetcode.com/problems/guess-number-higher-or-lower/)  
-[confusing part](https://leetcode.com/problems/guess-number-higher-or-lower/discuss/84665/The-key-point-is-to-read-the-problem-carefully.)
+Here is the [confusing part](https://leetcode.com/problems/guess-number-higher-or-lower/discuss/84665/The-key-point-is-to-read-the-problem-carefully.)
 ```
 class Solution {
 public:
