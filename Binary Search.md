@@ -124,6 +124,10 @@ int firstBadVersion(int n) {
     }
 ```
 ------
+One Thing should be noticed is that we are suggested to use start+(end-start)/2 instead of using (start+end)/2 since the last may cause data overflow, if both start and end are closed to INT_MAX(sounds stupid).  
+You can see more details [here](https://leetcode.com/problems/first-bad-version/discuss/71311/A-good-warning-to-me-to-use-start%2B(end-start)2-to-avoid-overflow)
+
+
 ### Reference
 wiki: https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95
 BinarySearch: https://blog.csdn.net/qq_21688757/article/details/53907379
