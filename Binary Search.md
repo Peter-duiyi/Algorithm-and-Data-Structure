@@ -37,7 +37,6 @@ Therefore, personally, I prefer to write a void function and store the result at
 int res = 0;
 void binarySearch(int begin, int end, int target) {
 		if (begin > end) res = -1;  // if cannot find the number
-
 		int mid = begin + (end - begin) / 2;
 		if (_v[mid] < target) { // target is at the right side
 			binarySearch(mid + 1, end, target); // return here is necessary
@@ -71,6 +70,39 @@ int bianrySearch(int begin, int end, int target) {
 ```
 I think I like this one better than the previous one. And I feel free to use return type without worrying about where I should set exits for the program.
 
+But that's not enough. Now suppose we are given a array and a target, 
+and we are requested to find the first matched element in the array.
+Return 0 if it cannot be found.
+```
+vector: [1, 2, 3, 4, 4, 5]
+target: 4
+```
+The code is written by others, and I will post the refererence below.
+I choose this code beacuse it only changes a little bit about binary search, which will make the code much more understandable.
+Basically, the algorithm will use a temp variable to store index of mateched element and keep updating it. And the searching will never stop untill begin > end
+```
+int binarySearchFindLast(int begin, int end, int target){
+        int temp = -1;
+        while(begin <= end){
+            //base case
+            int mid = begin + (end - begin)/2;
+            if(_v[mid] < target){ // target is on the right
+                begin = mid + 1;
+            }
+            if(_v[mid] > target){ // target is on the left
+                end = mid - 1;
+            }
+            if(_v[mid] == target){ // find the target
+                temp = mid;        //record mached number
+                end = mid - 1;     
+            }
+        }
+        return temp;
+    }
+```
+You can find a similar quesion here [leetcode.34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+
 ------
 ### Reference
 wiki: https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95
+BinarySearch: https://blog.csdn.net/qq_21688757/article/details/53907379
