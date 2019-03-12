@@ -79,7 +79,7 @@ target: 4
 ```
 The code is written by others, and I will post the refererence below.
 I choose this code beacuse it only changes a little bit about binary search, which will make the code much more understandable.
-Basically, the algorithm will use a temp variable to store index of mateched element and keep updating it. And the searching will never stop untill begin > end
+Basically, the algorithm will use a temp variable to store index of mateched element and keep updating it. And the searching will never stop untill begin > end.
 ```
 int binarySearchFindLast(int begin, int end, int target){
         int temp = -1;
