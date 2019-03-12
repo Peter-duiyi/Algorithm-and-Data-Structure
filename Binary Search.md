@@ -121,7 +121,7 @@ int firstBadVersion(int n) {
             }
         }
         return temp;
-}
+    }
 ```
 ------
 ### Reference
