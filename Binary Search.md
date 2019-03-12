@@ -102,6 +102,29 @@ int binarySearchFindLast(int begin, int end, int target){
 ```
 You can find a similar quesion here [leetcode.34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 
+After we are done with the problem above. We can take a look at a similar quesion that I just found but it is much easier.
+[leetcode.278](https://leetcode.com/problems/first-bad-version/)
+Here I used the same idea with a few modifications.
+```
+int firstBadVersion(int n) {
+        int temp = -1;
+        int left = 0;
+        int right = n;
+        while(left <= right){
+            int mid = left + (right - left)/2;
+            if(!isBadVersion(mid)){ //bad is on the right
+                left = mid + 1;
+            }
+            if(isBadVersion(mid)){  //bad is on the left or this one
+                temp = mid;  // store this index
+                right = mid -1;
+            }
+        }
+        return temp;
+    }
+
+
+```
 ------
 ### Reference
 wiki: https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95
