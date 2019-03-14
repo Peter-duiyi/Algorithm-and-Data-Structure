@@ -90,7 +90,7 @@ int binarySearch(int left, int right, int target) {
 	}
 
 ```
-But that's not enough. Further Problems can be seperated into serveral types ant let's take a look.
+But that's not enough. Further Problems can be seperated into serveral types ant let's take a look.  
 Problem Type 1:  typical binary search. It's the easiest one.
 
 [374. Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)
@@ -160,7 +160,21 @@ public:
     }
 };
 ```
+Problem Type 2:
+get the lower bound --> find the first matched number
+in these cases, `we cannot stop once we find the matched number because we are supposed to find the earliest one in the array` and that's why we don't have this line, if(arr[mid] == target), in our code.
+[278. First Bad Version](https://leetcode.com/problems/first-bad-version/)
+```
 
+
+
+
+
+
+```
+Problem Type 3:
+get the upper bound
+```
 Now suppose we are given a array and a target, 
 and we are requested to find the first matched element in the array.
 Return 0 if it cannot be found.
