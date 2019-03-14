@@ -122,7 +122,7 @@ int upperBound(int left, int right, int target) {
 ```
 Now, let's take a look at certain problems.
 
-Problem Type 1:  typical binary search. It's the easiest one.
+Problem Type 1:  typical binary search. It's the easiest one.  
 [374. Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)
 ```
 class Solution {
@@ -190,7 +190,7 @@ public:
     }
 };
 ```
-Problem Type 2: find the first and last matched number --> get the lower bound
+Problem Type 2: find the first and last matched number --> get the lower bound  
 [278. First Bad Version](https://leetcode.com/problems/first-bad-version/)
 ```
 class Solution {
