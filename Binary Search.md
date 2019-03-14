@@ -90,7 +90,7 @@ int binarySearch(int left, int right, int target) {
 	}
 
 ```
-But that's not enough. Further Problems can be seperated into serveral types ant let's take a look.  
+But that's not enough. Further Problems can be seperated into serveral types and let's take a look.  
 Problem Type 1:  typical binary search. It's the easiest one.
 
 [374. Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)
@@ -162,12 +162,27 @@ public:
 ```
 Problem Type 2:
 get the lower bound --> find the first matched number
-in these cases, `we cannot stop once we find the matched number because we are supposed to find the earliest one in the array` and that's why we don't have this line, if(arr[mid] == target), in our code.
+in these cases, `we cannot stop once we find the matched number because we are supposed to find the earliest one in the array` and that's why we don't have this line, if(arr[mid] == target), in our code.  
 [278. First Bad Version](https://leetcode.com/problems/first-bad-version/)
 ```
-
-
-
+class Solution {
+public:
+    int firstBadVersion(int n) {
+        int left = 0;
+        int right = n;
+        int temp = 0;
+        while(left <= right){
+            int mid = left + (right - left) / 2;
+            if(!isBadVersion(mid)){ // bad is on the right
+                left = mid + 1;
+            }else{
+                temp = right;
+                right = mid - 1;
+            }
+        }
+        return left;
+    }
+};
 
 
 
