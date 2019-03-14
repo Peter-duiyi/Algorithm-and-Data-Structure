@@ -95,8 +95,30 @@ Problem Type 1:  typical binary search. It's the easiest one.
 
 [374. Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)
 ```
+class Solution {
+public:
+    int guessNumber(int n) {
+        int left = 0;
+        int right = n + 1;
+        while(left < right){
+            int mid = left + (right - left)/2;
+            if(guess(mid) == 1){
+                left = mid + 1;
+            }
+            if(guess(mid) == -1){
+                right = mid;
+            }
+            if(guess(mid) == 0){
+                return mid;
+            }
+        }
+        return -1;
+    }
+};
 
-
+```
+[69. Sqrt(x)](https://leetcode.com/problems/sqrtx/)
+```
 class Solution {
 public:
     int mySqrt(int x) {
@@ -138,9 +160,6 @@ public:
     }
 };
 ```
-
-
-
 
 Now suppose we are given a array and a target, 
 and we are requested to find the first matched element in the array.
