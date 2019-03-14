@@ -24,3 +24,10 @@ Use Inorder Traversal to output nodes in order
 
 
 
+### B-Tree
+
+
+### B+ Tree
+
+
+### R Tree
