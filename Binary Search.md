@@ -74,8 +74,8 @@ Howerver, after doing several problems of binary search on Leetcode, I found the
 Notice: we don't have to change /2 to >> 1 here, it may cause problem either when occurs to negative number or the logical of calculation.
 ```
 int binarySearch(int left, int right, int target) {
-		int mid = left + (right - left) / 2;
 		while (left < right) {
+			int mid = left + (right - left) / 2;
 			if (_v[mid] < target) {
 				left = mid + 1;
 			}
@@ -89,6 +89,35 @@ int binarySearch(int left, int right, int target) {
 		return -1;
 	}
 
+```
+Then we can implement the function to get the lowerBound or upperBound, this code also from a video and I will post the link below
+A = [1, 2, 2, 2, 4, 4, 5]
+lower_bound(A, 2) = 1, lower_bound(A, 3) = 4(does not exist)
+upper_bound(A, 2) = 4, lower_bound(A, 5) = 7(does not exist)
+```
+int lowerBound(int left, int right, int target) {
+		while (left < right) {
+			int mid = left + (right - left) / 2;
+			if (_v[mid] >= target) {
+				right = mid;
+			}else{
+				left = mid + 1;
+			}
+		}
+		return l;
+	}
+
+int upperBound(int left, int right, int target) {
+		while (left < right) {
+			int mid = left + (right - left) / 2;
+			if (_v[mid] > target) {
+				right = mid;
+			}else{
+				left = mid + 1;
+			}
+		}
+		return l;
+	}
 ```
 But that's not enough. Further Problems can be seperated into serveral types and let's take a look.  
 Problem Type 1:  typical binary search. It's the easiest one.
