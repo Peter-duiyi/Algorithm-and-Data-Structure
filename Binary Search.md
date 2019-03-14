@@ -92,9 +92,11 @@ int binarySearch(int left, int right, int target) {
 ```
 But that's not enough. Further Problems can be seperated into serveral types ant let's take a look.
 Problem Type 1:  typical binary search. It's the easiest one.
-```
+
 [374. Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)
 ```
+
+
 class Solution {
 public:
     int mySqrt(int x) {
