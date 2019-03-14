@@ -94,6 +94,7 @@ Then we can implement the function to get the lowerBound or upperBound, this cod
 A = [1, 2, 2, 2, 4, 4, 5]
 lower_bound(A, 2) = 1, lower_bound(A, 3) = 4(does not exist)
 upper_bound(A, 2) = 4, lower_bound(A, 5) = 7(does not exist)
+in these cases, `we cannot stop once we find the matched number because we are supposed to find the earliest/latest one in the array` and that's why we don't have this line, if(arr[mid] == target), in our code.  
 ```
 int lowerBound(int left, int right, int target) {
 		while (left < right) {
@@ -119,9 +120,9 @@ int upperBound(int left, int right, int target) {
 		return l;
 	}
 ```
-But that's not enough. Further Problems can be seperated into serveral types and let's take a look.  
-Problem Type 1:  typical binary search. It's the easiest one.
+Now, let's take a look at certain problems.
 
+Problem Type 1:  typical binary search. It's the easiest one.
 [374. Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)
 ```
 class Solution {
@@ -189,28 +190,53 @@ public:
     }
 };
 ```
-Problem Type 2:
-get the lower bound --> find the first matched number
-in these cases, `we cannot stop once we find the matched number because we are supposed to find the earliest one in the array` and that's why we don't have this line, if(arr[mid] == target), in our code.  
+Problem Type 2: find the first and last matched number --> get the lower bound
 [278. First Bad Version](https://leetcode.com/problems/first-bad-version/)
 ```
 class Solution {
 public:
-    int firstBadVersion(int n) {
+    vector<int> searchRange(vector<int>& nums, int target) {
         int left = 0;
-        int right = n;
-        int temp = 0;
-        while(left <= right){
-            int mid = left + (right - left) / 2;
-            if(!isBadVersion(mid)){ // bad is on the right
-                left = mid + 1;
-            }else{
-                temp = right;
-                right = mid - 1;
-            }
+        int right = nums.size();
+        vector<int> res;
+        if(nums.size() == 1){
+            
         }
-        return left;
+        int first = lowerBound(nums, left, right, target);
+        int last = upperBound(nums, left, right, target);
+        res.push_back(first);
+        res.push_back(last);
+        return res;
     }
+    
+    	int lowerBound(vector<int>& nums, int left, int right, int target) {
+		while (left < right) {
+			int mid = left + (right - left) / 2;
+			if (nums[mid] >= target) {
+				right = mid;
+			}
+			else {
+				left = mid + 1;
+			}
+		}
+		if (left < nums.size() && nums[left] == target) return left; // find it
+		else return -1;
+	}
+
+	int upperBound(vector<int>& nums, int left, int right, int target) {
+		while (left < right) {
+			int mid = left + (right - left) / 2;
+			if (nums[mid] > target) {
+				right = mid;
+			}
+			else {
+				left = mid + 1;
+			}
+		}
+        int temp = left - 1;
+		if (temp < nums.size() && nums[temp] == target) return temp; // find it
+		else return -1;
+	}
 };
 
 
