@@ -70,7 +70,77 @@ int bianrySearch(int begin, int end, int target) {
 ```
 I think I like this one better than the previous one. And I feel free to use return type without worrying about where I should set exits for the program.
 
-But that's not enough. Now suppose we are given a array and a target, 
+Howerver, after doing several problems of binary search on Leetcode, I found there are hundreds of different ways of writing binary search. And the one below is another common way that we will use to write binary search.
+Notice: we don't have to change /2 to >> 1 here, it may cause problem either when occurs to negative number or the logical of calculation.
+```
+int binarySearch(int left, int right, int target) {
+		int mid = left + (right - left) / 2;
+		while (left < right) {
+			if (_v[mid] < target) {
+				left = mid + 1;
+			}
+			if (_v[mid] > target) {
+				right = mid;
+			}
+			if (_v[mid] == target) {
+				return mid;
+			}
+		}
+		return -1;
+	}
+
+```
+But that's not enough. Further Problems can be seperated into serveral types ant let's take a look.
+Problem Type 1:  typical binary search. It's the easiest one.
+```
+[374. Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)
+```
+class Solution {
+public:
+    int mySqrt(int x) {
+        if(x <= 0) return 0;
+        int left = 1, right = x;
+        while(left <= right){
+            long mid = (right - left) / 2 + left;
+            if(mid * mid > x){
+                right = (int)mid - 1;
+            }else if(mid * mid < x){
+                left = (int)mid + 1;
+            }else if(mid * mid == x){
+                return (int)mid;
+            }
+        }
+        
+        return right;
+    }
+};
+    
+class Solution {
+public:
+    int mySqrt(int x) {
+        if(x <= 0) return 0;
+        if(x == 1) return 1;
+        int left = 1, right = x;
+        while(left < right){
+            long mid = (right - left) / 2 + left;
+            if(mid * mid > x){
+                right = (int)mid;
+            }else if(mid * mid < x){
+                left = (int)mid + 1;
+            }else if(mid * mid == x){
+                return (int)mid;
+            }
+        }
+        
+        return right - 1;
+    }
+};
+```
+
+
+
+
+Now suppose we are given a array and a target, 
 and we are requested to find the first matched element in the array.
 Return 0 if it cannot be found.
 ```
@@ -159,3 +229,4 @@ public:
 ### Reference
 wiki: https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95
 BinarySearch: https://blog.csdn.net/qq_21688757/article/details/53907379
+BinarySearch: https://www.youtube.com/watch?v=v57lNF2mb_s
