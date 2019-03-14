@@ -1,23 +1,23 @@
-###Tree
+### Tree
 
 
 
-###Bianry Tree
-
-
-
-
-###Binary Search Tree
+### Bianry Tree
 
 
 
 
-###AVL Tree(self-balancing binary search tree)
+### Binary Search Tree
 
 
 
 
-###Red-black Tree
+### AVL Tree(self-balancing binary search tree)
+
+
+
+
+### Red-black Tree
 
 
 
