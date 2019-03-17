@@ -1,7 +1,7 @@
 ### UnionFind
 
-[花花酱 Disjoint-set/Union-find Forest - 刷题找工作 SP1](https://www.youtube.com/watch?v=VJnUwsE4fWA)
-
+[花花酱 Disjoint-set/Union-find Forest - 刷题找工作 SP1](https://www.youtube.com/watch?v=VJnUwsE4fWA)  
+https://segmentfault.com/a/1190000012334345
 
 code below from that link(only Chinese version)
 
