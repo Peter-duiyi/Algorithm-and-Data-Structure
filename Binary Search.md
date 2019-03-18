@@ -121,6 +121,7 @@ int upperBound(int left, int right, int target) {
 		return l;
 	}
 ```
+### Problems
 Now, let's take a look at certain problems.
 
 Problem Type 1:  typical binary search. It's the easiest one.  
