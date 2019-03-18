@@ -3,7 +3,7 @@
 [花花酱 Disjoint-set/Union-find Forest - 刷题找工作 SP1](https://www.youtube.com/watch?v=VJnUwsE4fWA)  
 https://segmentfault.com/a/1190000012334345
 
-A very interesting explanation of UnionFind
+A very interesting explanation of UnionFind  
 https://blog.csdn.net/liujian20150808/article/details/50848646
 
 code below from link that I post(only Chinese version)
