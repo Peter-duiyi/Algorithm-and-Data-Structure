@@ -3,8 +3,14 @@
 [花花酱 Disjoint-set/Union-find Forest - 刷题找工作 SP1](https://www.youtube.com/watch?v=VJnUwsE4fWA)  
 https://segmentfault.com/a/1190000012334345
 
-code below from that link(only Chinese version)
+A very interesting explanation of UnionFind
+https://blog.csdn.net/liujian20150808/article/details/50848646
 
+code below from link that I post(only Chinese version)
+
+
+What is UnionFind?
+It's a tree data structure, which helps people solve problems that involves disjoint sets and relevant operations, for example, union and query.
 
 ```
 // Get the root of u.
@@ -42,6 +48,4 @@ bool Union(int u, int v) {
 Union function:
 1. Before truly union two nodes to a edge, we should verify that if they form an edge already. And we do it by finding and comparing their roots. That's what we do at the first three lines of Union Function.
 2. Then, just as mentioned in the comments, since two nodes are not connected, we are going to union them into an edge. We pick the root which has the highest rank as the root of new tree and merge the other low rank tree into the new tree.
-
-
 That's what we do in the rest part of Union function.
