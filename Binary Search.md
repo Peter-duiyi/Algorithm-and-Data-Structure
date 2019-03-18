@@ -12,7 +12,7 @@ log2n = k
 ```
 That means we need to divide log2n(which is k we mentioned before) times untill we get 1 element left.
 
-### Code
+### Pure Binary Search
 notice: _v is a private vector<int> I used in the code below 
 ```
 int binarySearch(int begin, int end, int target) {
@@ -95,6 +95,7 @@ A = [1, 2, 2, 2, 4, 4, 5]
 lower_bound(A, 2) = 1, lower_bound(A, 3) = 4(does not exist)
 upper_bound(A, 2) = 4, lower_bound(A, 5) = 7(does not exist)
 in these cases, `we cannot stop once we find the matched number because we are supposed to find the earliest/latest one in the array` and that's why we don't have this line, if(arr[mid] == target), in our code.  
+### Lower Bound and Upper Bound
 ```
 int lowerBound(int left, int right, int target) {
 		while (left < right) {
