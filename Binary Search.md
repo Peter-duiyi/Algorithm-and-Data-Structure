@@ -106,7 +106,7 @@ int lowerBound(int left, int right, int target) {
 				left = mid + 1;
 			}
 		}
-		return l;
+		return left;
 	}
 
 int upperBound(int left, int right, int target) {
@@ -118,7 +118,7 @@ int upperBound(int left, int right, int target) {
 				left = mid + 1;
 			}
 		}
-		return l;
+		return left;
 	}
 ```
 ### Problems
