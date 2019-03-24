@@ -1,4 +1,4 @@
-## DP quesion collection(array related)
+## DP quesion collection
 ### Coin Change
 1. Get least number of coin change  
 [322. Coin Change](https://leetcode.com/problems/coin-change/)  
