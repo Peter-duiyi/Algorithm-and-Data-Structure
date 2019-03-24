@@ -1,5 +1,18 @@
-### DP quesion collection(array related)
-#### Continuous
+## DP quesion collection(array related)
+### Coin Change
+1. Get least number of coin change  
+[322. Coin Change](https://leetcode.com/problems/coin-change/)  
+for each Amount(Problem) `x`, we convert it into a smaller Amount(subproblem) `x - coin[i] + 1`, where `0 =< i < coin.size()`.
+And we find the smallest result among these subproblems.
+```
+dp[i] = min(dp[i], 1 + dp[i - coins[j]]);
+```
+ref : https://blog.csdn.net/wdxin1322/article/details/9501163  
+
+2. 
+
+
+### Continuous Subarray
 1. Get the maxSum of Continues Subarray(or get the array)  
 [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 ```
@@ -28,11 +41,11 @@ and then go backwards starting at that number until we find a `1`, suppose the i
 then the maxSubarray should be [i-1, j]
 
 
-#### Not Continuous
-1. get the length of longest incresing subsequence(or array)
+### Not Continuous Subarray
+1. get the length of longest incresing subsequence(or array)  
 [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 
-2. get the number of longest increasing Subarray
+2. get the number of longest increasing Subarray  
 [673. Number of Longest Increasing Subsequence](https://leetcode.com/problems/number-of-longest-increasing-subsequence/)
 
 
