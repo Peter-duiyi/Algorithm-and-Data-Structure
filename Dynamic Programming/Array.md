@@ -39,9 +39,12 @@ Note that we go through each item in the first loop and go through each capacity
             }
         }
 ```
+It's also an 0-1 backpack quesion. So for the second loop, we also need to do it from the end.
 ref: [花花酱 0-1 Knapsack Problem 01背包问题 - 刷题找工作 SP10](https://www.youtube.com/watch?v=CO0r6kcwHUU&t=896s)  
 
-3. Compelete backpack  
+3. Compelete backpack
+
+
 
 
 
