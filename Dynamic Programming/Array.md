@@ -8,12 +8,12 @@
 
 
 
-ref:
+ref:  
 [背包问题九讲](https://www.kancloud.cn/kancloud/pack/70125)  
 [leetcode背包问题汇总](https://blog.csdn.net/u013166817/article/details/85449218)
 
 #### Coin Change
-1. Get least number of coin changes
+1. Get least number of coin changes  
 [322. Coin Change](https://leetcode.com/problems/coin-change/)  
 for each Amount(Problem) `x`, we convert it into a smaller Amount(subproblem) `x - coin[i] + 1`, where `0 =< i < coin.size()`.
 And we find the smallest result among these subproblems.
@@ -22,7 +22,7 @@ dp[i] = min(dp[i], 1 + dp[i - coins[j]]);
 ```
 ref : https://blog.csdn.net/wdxin1322/article/details/9501163  
 
-2. Get number of combination of coin change
+2. Get number of combination of coin change  
 [518. Coin Change 2]  
 (https://leetcode.com/problems/coin-change-2/)
 
