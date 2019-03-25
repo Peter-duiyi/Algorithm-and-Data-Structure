@@ -58,7 +58,7 @@ Since we can get same item multiple times from the backpack this time, we should
 
 4. Compute the number of ways that the backpack can be fullfilled  
 [0-1背包方案数](https://www.lintcode.com/problem/backpack-v/description)  
-[完全背包方案书](https://www.lintcode.com/problem/backpack-iv/description)
+[完全背包方案数](https://www.lintcode.com/problem/backpack-iv/description)
 
 
 
