@@ -27,9 +27,12 @@ public:
     }
 };
 ```
-Note that we go through each item in the first loop and go throught each capacity of backpack in the second loop. And in the second loop, we start at the end of the dp array instead of the head, otherwise items can be picked multiply times and quesion becomes a comp
+Note that we go through each item in the first loop and go through each capacity of backpack in the second loop. And in the second loop, we start at the end of the dp array instead of the head, otherwise items can be picked multiply times and it becomes a complete backpack.
 
-2. 0-1 backpack with value.
+2. 0-1 backpack with value  
+
+
+3. Compelete backpack  
 
 
 
