@@ -30,6 +30,7 @@ public:
 Note that we go through each item in the first loop and go through each capacity of backpack in the second loop. And in the second loop, we start at the end of the dp array instead of the head, otherwise items can be picked multiply times and it becomes a complete backpack.
 
 2. 0-1 backpack with value  
+[0-1背包有价值](https://www.lintcode.com/problem/backpack-ii/)
 ```
         for(int i = 0; i < numOfItems; i++){
             for(int j = capacity; j >= 0; j--){
@@ -42,9 +43,22 @@ Note that we go through each item in the first loop and go through each capacity
 It's also an 0-1 backpack quesion. So for the second loop, we also need to do it from the end.  
 ref: [花花酱 0-1 Knapsack Problem 01背包问题 - 刷题找工作 SP10](https://www.youtube.com/watch?v=CO0r6kcwHUU&t=896s)  
 
-3. Compelete backpack
+3. Compelete backpack  
+[完全背包问题](https://www.lintcode.com/problem/backpack-iii/description)  
+```
+        for(int i = 0; i < numOfItems; i++){
+            for(int j = 0; j <= capacity; j--){
+                if(j >= A[i]){
+                    dp[j] = max(dp[j], dp[j - A[i]] + v[i])
+                }
+            }
+        }
+```
+Since we can get same item multiple times from the backpack this time, we should go from the start of the array at the second loop. It is also clear to see that, in the three problems so far, the differences are mainly about the order of second loop.
 
-
+4. Compute the number of ways that the backpack can be fullfilled  
+[0-1背包方案数](https://www.lintcode.com/problem/backpack-v/description)  
+[完全背包方案书](https://www.lintcode.com/problem/backpack-iv/description)
 
 
 
