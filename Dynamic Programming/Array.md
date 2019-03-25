@@ -23,8 +23,9 @@ dp[i] = min(dp[i], 1 + dp[i - coins[j]]);
 ref : https://blog.csdn.net/wdxin1322/article/details/9501163  
 
 2. Get number of combination of coin change  
-[518. Coin Change 2]  
-(https://leetcode.com/problems/coin-change-2/)
+[518. Coin Change 2](https://leetcode.com/problems/coin-change-2/)  
+
+
 
 #### climbing stairs
 
