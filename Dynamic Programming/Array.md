@@ -3,6 +3,31 @@
 #### Backpack Problem
 1. 0-1 backpack without value. Fill the backpack as full as possible(no value, items cannot be divided, can only be used once)  
 [92. Backpack](https://www.lintcode.com/problem/backpack/description)
+```
+class Solution {
+public:
+    /**
+     * @param m: An integer m denotes the size of a backpack
+     * @param A: Given n items with size A[i]
+     * @return: The maximum size
+     */
+    int backPack(int m, vector<int> &A) {
+        int capacity = m;
+        int numOfItems = A.size();
+        if(numOfItems == 0 || capacity == 0) return 0;
+        vector<int> dp(capacity + 1, 0); // [0, m]
+        for(int i = 0; i < numOfItems; i++){
+            for(int j = capacity; j >= 0; j--){
+                if(j >= A[i]){
+                    dp[j] = max(dp[j], dp[j - A[i]] + A[i]);
+                }
+            }
+        }
+        return dp[capacity];
+    }
+};
+```
+Note that we go through each item in the first loop and go throught each capacity of backpack in the second loop. And in the second loop, we start at the end of the dp array instead of the head, otherwise items can be picked multiply times and quesion becomes a comp
 
 2. 0-1 backpack with value.
 
