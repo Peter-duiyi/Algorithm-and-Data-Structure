@@ -57,15 +57,28 @@ ref: [花花酱 0-1 Knapsack Problem 01背包问题 - 刷题找工作 SP10](http
 Since we can get same item multiple times from the backpack this time, we should go from the start of the array at the second loop. 
 
 4. Compute the number of ways that the backpack can be fullfilled  
-[0-1背包方案数](https://www.lintcode.com/problem/backpack-v/description)  
+[背包问题——“01背包”及“完全背包”装满背包的方案总数分析及实现](https://blog.csdn.net/wumuzi520/article/details/7021210)  
+[0-1背包方案数](https://www.lintcode.com/problem/backpack-v/description)
+```
+     vector<int> dp(capacity + 1, 0); // [0, m]
+     dp[0] = 1;
+     for(int i = 0; i <= capacity; i++){
+            for(int j = numOfItem; j > 0; j--){
+                if(j >= A[i]){
+                    dp[i] += dp[i - A[j]];
+                }
+            }
+     }
+```
+
 [完全背包方案数](https://www.lintcode.com/problem/backpack-iv/description)
 ```
      vector<int> dp(capacity + 1, 0); // [0, m]
      dp[0] = 1;
      for(int i = 0; i <= capacity; i++){
-            for(int j = 0; j < numOfItem; j--){
+            for(int j = 0; j < numOfItem; j++){
                 if(j >= A[i]){
-                    dp[i] += dp[i - A[j]
+                    dp[i] += dp[i - A[j]];
                 }
             }
      }
