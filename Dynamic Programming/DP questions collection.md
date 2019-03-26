@@ -101,7 +101,13 @@ ref : https://blog.csdn.net/wdxin1322/article/details/9501163
 
 2. Get number of combination of coin change  
 [518. Coin Change 2](https://leetcode.com/problems/coin-change-2/)  
-
+```
+for(int i = 0; i < coins.size(); i++){
+            for(int j = 0; j <= amount; j++){
+                if(j >= coins[i]) dp[j] += dp[j - coins[i]];
+            }
+        }
+```
 
 
 #### climbing stairs
