@@ -1,4 +1,4 @@
-## DP questions collection
+## Typical DP questions collection
 ### Backpack, coin change and climbing stairs
 #### Backpack Problem
 1. 0-1 backpack without value. Fill the backpack as full as possible(no value, items cannot be divided, can only be used once).  
