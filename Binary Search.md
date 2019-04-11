@@ -100,10 +100,10 @@ in these cases, `we cannot stop once we find the matched number because we are s
 int lowerBound(int left, int right, int target) {
 		while (left < right) {
 			int mid = left + (right - left) / 2;
-			if (_v[mid] >= target) {
-				right = mid;
-			}else{
+			if(_v[mid] < target){
 				left = mid + 1;
+			}else{
+				right = mid;
 			}
 		}
 		return left;
@@ -112,10 +112,10 @@ int lowerBound(int left, int right, int target) {
 int upperBound(int left, int right, int target) {
 		while (left < right) {
 			int mid = left + (right - left) / 2;
-			if (_v[mid] > target) {
-				right = mid;
-			}else{
+			if(_v[mid] <= target){
 				left = mid + 1;
+			}else{
+				right = mid;
 			}
 		}
 		return left;
