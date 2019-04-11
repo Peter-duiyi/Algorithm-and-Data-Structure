@@ -243,7 +243,7 @@ public:
 
 
 
-
+```
 Problem Type 3:
 get the upper bound
 
