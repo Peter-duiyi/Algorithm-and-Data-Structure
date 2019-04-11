@@ -92,6 +92,9 @@ int binarySearch(int left, int right, int target) {
 ```
 Then we can implement the function to get the lowerBound or upperBound, this code also from a video and I will post the link below
 A = [1, 2, 2, 2, 4, 4, 5]
+        l        u
+lower_bound is the first found target number
+upper_bound is the number after last target number
 lower_bound(A, 2) = 1, lower_bound(A, 3) = 4(does not exist)
 upper_bound(A, 2) = 4, lower_bound(A, 5) = 7(does not exist)
 in these cases, `we cannot stop once we find the matched number because we are supposed to find the earliest/latest one in the array` and that's why we don't have this line, if(arr[mid] == target), in our code.  
@@ -198,41 +201,40 @@ Problem Type 2: find the first and last matched number --> get the lower bound
 class Solution {
 public:
     vector<int> searchRange(vector<int>& nums, int target) {
-        int left = 0;
-        int right = nums.size();
         vector<int> res;
-        if(nums.size() == 1){
-            
-        }
-        int first = lowerBound(nums, left, right, target);
-        int last = upperBound(nums, left, right, target);
+        int first = lowerBound(nums, target);
+        int last = upperBound(nums, target);
         res.push_back(first);
         res.push_back(last);
         return res;
     }
     
-    	int lowerBound(vector<int>& nums, int left, int right, int target) {
+    int lowerBound(vector<int>& nums, int target) {
+        int left = 0;
+        int right = nums.size();
 		while (left < right) {
 			int mid = left + (right - left) / 2;
-			if (nums[mid] >= target) {
-				right = mid;
+			if (nums[mid] < target) {
+                left = mid + 1;
 			}
 			else {
-				left = mid + 1;
+				right = mid;
 			}
 		}
 		if (left < nums.size() && nums[left] == target) return left; // find it
-		else return -1;
+		else return -1;	
 	}
 
-	int upperBound(vector<int>& nums, int left, int right, int target) {
+	int upperBound(vector<int>& nums, int target) {
+        int left = 0;
+        int right = nums.size();
 		while (left < right) {
 			int mid = left + (right - left) / 2;
-			if (nums[mid] > target) {
-				right = mid;
+			if (nums[mid] <= target) {
+				left = mid + 1;
 			}
 			else {
-				left = mid + 1;
+				right = mid;
 			}
 		}
         int temp = left - 1;
@@ -240,8 +242,6 @@ public:
 		else return -1;
 	}
 };
-
-
 
 ```
 Problem Type 3:
