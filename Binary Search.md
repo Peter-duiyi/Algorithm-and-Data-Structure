@@ -243,10 +243,10 @@ public:
 
 
 
-```
+
 Problem Type 3:
 get the upper bound
-```
+
 Now suppose we are given a array and a target, 
 and we are requested to find the first matched element in the array.
 Return 0 if it cannot be found.
